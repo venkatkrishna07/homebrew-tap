@@ -5,13 +5,13 @@
 class Mkdev < Formula
   desc "Trusted HTTPS dev server with LAN broadcast via mDNS"
   homepage "https://github.com/venkatkrishna07/mkdev"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.2.0/mkdev_0.2.0_darwin_amd64.tar.gz"
-      sha256 "66b6976b6faad33346204d9379736f4e1a39b567b6ab29beb4fce95559c32ade"
+      url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.3.0/mkdev_0.3.0_darwin_amd64.tar.gz"
+      sha256 "e82103cf0f1085510b3d87dbe7f39657ae07234ab78cd8874a2dfa92d8c2a9f7"
 
       define_method(:install) do
         bin.install "mkdev"
@@ -19,8 +19,8 @@ class Mkdev < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.2.0/mkdev_0.2.0_darwin_arm64.tar.gz"
-      sha256 "0b33dfd0808b74b7de9e57454a3d14a843119e745d1509ca2dfcfef3b0bcb1b8"
+      url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.3.0/mkdev_0.3.0_darwin_arm64.tar.gz"
+      sha256 "10aa961f3466d50e1fb2ba80afdb143d6ba476da33ffe15e864c6fb42a772cb0"
 
       define_method(:install) do
         bin.install "mkdev"
@@ -31,16 +31,16 @@ class Mkdev < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.2.0/mkdev_0.2.0_linux_amd64.tar.gz"
-      sha256 "8167377ffba1dba30151de2f09dce66367d501ce8a90efe4d68c8166fe3cd46b"
+      url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.3.0/mkdev_0.3.0_linux_amd64.tar.gz"
+      sha256 "066c45d435f71ee64a74348306b41e70f610228ef8b872ade858db231425300d"
       define_method(:install) do
         bin.install "mkdev"
         generate_completions_from_executable(bin/"mkdev", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.2.0/mkdev_0.2.0_linux_arm64.tar.gz"
-      sha256 "4964faece0b2814dec1f839c5490ce927955e9ae405aae06d87f4b3d5e3dd4be"
+      url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.3.0/mkdev_0.3.0_linux_arm64.tar.gz"
+      sha256 "97c96f0c5fc9b74c205ef76e7c0b7a9c9eb1c482a66904542f710e7a8bdfcbac"
       define_method(:install) do
         bin.install "mkdev"
         generate_completions_from_executable(bin/"mkdev", "completion")
