@@ -11,7 +11,7 @@ class Mkdev < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.3.0/mkdev_0.3.0_darwin_amd64.tar.gz"
-      sha256 "e82103cf0f1085510b3d87dbe7f39657ae07234ab78cd8874a2dfa92d8c2a9f7"
+      sha256 "27f79e586172cc9b97cbdea0b4da7da35bcbdd8563b07eaa8699dd6f904eb628"
 
       define_method(:install) do
         bin.install "mkdev"
@@ -20,7 +20,7 @@ class Mkdev < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.3.0/mkdev_0.3.0_darwin_arm64.tar.gz"
-      sha256 "10aa961f3466d50e1fb2ba80afdb143d6ba476da33ffe15e864c6fb42a772cb0"
+      sha256 "5481cf9e793f9b415a3798a8011c80ef9a459bb350e1fcef7e2ca41f2fd1c85c"
 
       define_method(:install) do
         bin.install "mkdev"
@@ -32,7 +32,7 @@ class Mkdev < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.3.0/mkdev_0.3.0_linux_amd64.tar.gz"
-      sha256 "066c45d435f71ee64a74348306b41e70f610228ef8b872ade858db231425300d"
+      sha256 "a91e4e6e69a120aa178db99d455cc19b3d3d29751c83bebc7f5b0de7188420b9"
       define_method(:install) do
         bin.install "mkdev"
         generate_completions_from_executable(bin/"mkdev", "completion")
@@ -40,7 +40,7 @@ class Mkdev < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/venkatkrishna07/mkdev/releases/download/v0.3.0/mkdev_0.3.0_linux_arm64.tar.gz"
-      sha256 "97c96f0c5fc9b74c205ef76e7c0b7a9c9eb1c482a66904542f710e7a8bdfcbac"
+      sha256 "9a9f414b2628c586ec66814bedc2c6f1d5353f4d10a1d14c00594bf790319865"
       define_method(:install) do
         bin.install "mkdev"
         generate_completions_from_executable(bin/"mkdev", "completion")
